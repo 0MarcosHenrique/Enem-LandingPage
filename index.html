@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit ChatGPT ENEM — Edição Exclusiva</title>
+  <meta name="description" content="Kit exclusivo com prompts prontos, sistema de redação e métodos de estudo para usar o ChatGPT no ENEM. R$27,90 — Edição Limitada." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CANVAS DE PARTÍCULAS (background)
+  ═══════════════════════════════════════════ -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR PERSONALIZADO
+  ═══════════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo__icon"><i class="fa-solid fa-bolt"></i></span>
+        <span class="logo__text">Kit <strong>ENEM IA</strong></span>
+      </a>
+
+      <!-- Badge desktop -->
+      <div class="header__badge">
+        <i class="fa-solid fa-crown"></i> Edição Exclusiva 2025
+      </div>
+
+      <!-- Nav links desktop -->
+      <nav class="nav" id="nav">
+        <a href="#conteudo" class="nav__link">O que tem</a>
+        <a href="#depoimentos" class="nav__link">Depoimentos</a>
+        <a href="#garantia" class="nav__link">Garantia</a>
+        <a href="https://pay.kiwify.com.br/Y3Xbo0Q" class="nav__cta">
+          R$27,90 — Quero agora <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </nav>
+
+      <!-- Hambúrguer mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — ATTENTION
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+
+      <!-- Coluna esquerda: copy -->
+      <div class="hero__copy" data-reveal>
+        <div class="hero__eyebrow">
+          <span class="badge badge--gold"><i class="fa-solid fa-fire"></i> Edição Limitada — 50 vagas</span>
+        </div>
+
+        <h1 class="hero__headline">
+          Pare de perder<br />
+          <span class="gradient-text">horas estudando</span><br />
+          do jeito errado.
+        </h1>
+
+        <p class="hero__sub">
+          O primeiro <strong>sistema completo</strong> para usar o ChatGPT como seu professor particular no ENEM — com prompts prontos, método de redação e cronograma inteligente. Sem enrolação.
+        </p>
+
+        <!-- Selinhos de confiança -->
+        <div class="hero__seals">
+          <div class="seal">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span><strong>7 dias</strong><br />garantia total</span>
+          </div>
+          <div class="seal">
+            <i class="fa-solid fa-infinity"></i>
+            <span><strong>Acesso</strong><br />vitalício</span>
+          </div>
+          <div class="seal">
+            <i class="fa-solid fa-bolt"></i>
+            <span><strong>Acesso</strong><br />imediato</span>
+          </div>
+        </div>
+
+        <!-- CTA principal -->
+        <div class="hero__cta-wrap">
+          <a href="https://pay.kiwify.com.br/Y3Xbo0Q" class="btn btn--primary btn--pulse" target="_blank" onclick="goCheckout(event)">
+            QUERO O KIT EXCLUSIVO
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <p class="hero__price-tag">
+            <span class="price-old">de R$97,00</span>
+            <span class="price-new">R$27,90</span>
+            <span class="price-note">pagamento único</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Coluna direita: mockup -->
+      <div class="hero__mockup" data-reveal data-delay="200">
+        <div class="mockup-frame">
+          <div class="mockup-glow"></div>
+          <img
+            src="./images/cards.png"
+            alt="Mockup do Kit ChatGPT ENEM"
+            class="mockup-img"
+          />
+          <div class="mockup-badge mockup-badge--tl">
+            <i class="fa-solid fa-crown"></i> Premium
+          </div>
+          <div class="mockup-badge mockup-badge--br">
+            <i class="fa-solid fa-lock"></i> Acesso agora
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>role para saber mais</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SEÇÃO PROBLEMA vs SOLUÇÃO — INTEREST
+  ═══════════════════════════════════════════ -->
+  <section class="problems" id="problema">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">A realidade de quem estuda sem método</p>
+        <h2 class="section-title">Você reconhece <span class="gradient-text">alguma dessas situações?</span></h2>
+      </div>
+
+      <div class="problems__grid">
+
+        <!-- Problemas -->
+        <div class="problems__col problems__col--bad" data-reveal>
+          <div class="col-header">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <h3>Sem o Kit</h3>
+          </div>
+          <ul class="problem-list">
+            <li><i class="fa-solid fa-xmark"></i> Passa horas no YouTube sem reter nada</li>
+            <li><i class="fa-solid fa-xmark"></i> Usa o ChatGPT errado — pergunta qualquer coisa e recebe respostas genéricas</li>
+            <li><i class="fa-solid fa-xmark"></i> Não sabe por onde começar a redação</li>
+            <li><i class="fa-solid fa-xmark"></i> Estuda muito, mas sem direção — falta plano</li>
+            <li><i class="fa-solid fa-xmark"></i> Na véspera, revisa tudo do zero — estressante</li>
+            <li><i class="fa-solid fa-xmark"></i> Sente que os outros sabem um segredo que você não sabe</li>
+          </ul>
+        </div>
+
+        <!-- Seta central -->
+        <div class="problems__arrow" data-reveal data-delay="100">
+          <div class="arrow-circle">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <span>com o kit</span>
+        </div>
+
+        <!-- Soluções -->
+        <div class="problems__col problems__col--good" data-reveal data-delay="200">
+          <div class="col-header">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Com o Kit</h3>
+          </div>
+          <ul class="problem-list">
+            <li><i class="fa-solid fa-check"></i> Prompts prontos por matéria — é só colar e estudar</li>
+            <li><i class="fa-solid fa-check"></i> O ChatGPT vira seu professor particular de verdade</li>
+            <li><i class="fa-solid fa-check"></i> Sistema de redação passo a passo com IA</li>
+            <li><i class="fa-solid fa-check"></i> Cronograma de estudos gerado pela IA para o seu perfil</li>
+            <li><i class="fa-solid fa-check"></i> Método de revisão inteligente — sem perder tempo</li>
+            <li><i class="fa-solid fa-check"></i> Você estuda menos horas, mas muito melhor</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       O QUE VOCÊ VAI RECEBER — DESIRE
+  ═══════════════════════════════════════════ -->
+  <section class="content" id="conteudo">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">Conteúdo exclusivo</p>
+        <h2 class="section-title">Tudo o que está <span class="gradient-text">dentro do Kit</span></h2>
+        <p class="section-desc">Não é uma pasta bagunçada de prompts soltos. É um sistema pensado para quem quer resultado no ENEM.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <div class="card card--diamond" data-reveal data-delay="0">
+          <div class="card__shine"></div>
+          <div class="card__icon">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="card__title">Prompts Prontos por Matéria</h3>
+          <p class="card__desc">Mais de 80 prompts organizados por disciplina — Matemática, Português, História, Ciências e muito mais. É só copiar, colar e estudar.</p>
+          <div class="card__tag"><i class="fa-solid fa-star"></i> Incluso</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card card--diamond" data-reveal data-delay="100">
+          <div class="card__shine"></div>
+          <div class="card__icon">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <h3 class="card__title">Sistema de Redação com IA</h3>
+          <p class="card__desc">Método em 6 etapas para criar, revisar e aperfeiçoar redações com o ChatGPT — da competência 1 até a 5. Com exemplos reais.</p>
+          <div class="card__tag"><i class="fa-solid fa-star"></i> Incluso</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card card--diamond" data-reveal data-delay="200">
+          <div class="card__shine"></div>
+          <div class="card__icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <h3 class="card__title">Cronograma de Estudos Inteligente</h3>
+          <p class="card__desc">Prompt especial que gera um cronograma personalizado baseado no seu tempo disponível, pontos fracos e data da prova.</p>
+          <div class="card__tag"><i class="fa-solid fa-star"></i> Incluso</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card card--diamond" data-reveal data-delay="300">
+          <div class="card__shine"></div>
+          <div class="card__icon">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <h3 class="card__title">Método de Revisão Inteligente</h3>
+          <p class="card__desc">Sistema de flashcards gerados por IA + técnica de espaçamento. Revise mais em menos tempo e nunca esqueça o que estudou.</p>
+          <div class="card__tag"><i class="fa-solid fa-star"></i> Incluso</div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card card--diamond" data-reveal data-delay="400">
+          <div class="card__shine"></div>
+          <div class="card__icon">
+            <i class="fa-solid fa-list-check"></i>
+          </div>
+          <h3 class="card__title">Checklist Completo ENEM</h3>
+          <p class="card__desc">O que estudar, quando revisar e o que não pode faltar nos dias antes da prova. Checklist prático para não deixar nada passar.</p>
+          <div class="card__tag"><i class="fa-solid fa-star"></i> Incluso</div>
+        </div>
+
+        <!-- Card 6 — Bônus -->
+        <div class="card card--diamond card--bonus" data-reveal data-delay="500">
+          <div class="card__shine"></div>
+          <div class="card__bonus-badge">BÔNUS</div>
+          <div class="card__icon">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <h3 class="card__title">50 Temas de Redação + Repertório</h3>
+          <p class="card__desc">50 temas comentados com repertório sociocultural pronto para cada um. Nunca mais caia de para-quedas numa redação desconhecida.</p>
+          <div class="card__tag card__tag--gold"><i class="fa-solid fa-crown"></i> Bônus exclusivo</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DIFERENCIAL — POR QUE É ÚNICO
+  ═══════════════════════════════════════════ -->
+  <section class="diferencial" id="diferencial">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">O que torna diferente</p>
+        <h2 class="section-title">Não é um pack de prompts <span class="gradient-text">soltos e bagunçados.</span></h2>
+      </div>
+
+      <div class="diferencial__grid">
+
+        <div class="diferencial__item" data-reveal>
+          <div class="diferencial__icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="diferencial__text">
+            <h4>É um SISTEMA completo</h4>
+            <p>Cada parte do Kit foi pensada para funcionar em conjunto. Do diagnóstico ao dia da prova, tudo conectado.</p>
+          </div>
+        </div>
+
+        <div class="diferencial__item" data-reveal data-delay="100">
+          <div class="diferencial__icon">
+            <i class="fa-solid fa-crosshairs"></i>
+          </div>
+          <div class="diferencial__text">
+            <h4>Direção, não volume</h4>
+            <p>Aqui não é sobre estudar mais horas — é sobre estudar com o método certo. Cada prompt tem um objetivo claro.</p>
+          </div>
+        </div>
+
+        <div class="diferencial__item" data-reveal data-delay="200">
+          <div class="diferencial__icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <div class="diferencial__text">
+            <h4>Edição Limitada</h4>
+            <p>Essa versão do Kit só existe nessa edição de lançamento. Quando fechar, fecha. Sem exceções.</p>
+          </div>
+        </div>
+
+        <div class="diferencial__item" data-reveal data-delay="300">
+          <div class="diferencial__icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="diferencial__text">
+            <h4>Feito para o ChatGPT real</h4>
+            <p>Todos os prompts foram testados no GPT-3.5 e GPT-4 e funcionam sem precisar de plano pago.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ESCASSEZ / URGÊNCIA
+  ═══════════════════════════════════════════ -->
+  <section class="urgencia" id="urgencia">
+    <div class="container">
+      <div class="urgencia__box glass" data-reveal>
+
+        <div class="urgencia__left">
+          <div class="urgencia__badge"><i class="fa-solid fa-fire"></i> Atenção</div>
+          <h2>Menos de <span class="gradient-text">50 vagas</span><br />nessa edição.</h2>
+          <p>Preço especial de lançamento por tempo limitado. Quando as vagas acabarem, o Kit sai do ar ou sobe de preço.</p>
+        </div>
+
+        <div class="urgencia__right">
+          <p class="urgencia__label">Oferta encerra em:</p>
+          <div class="countdown" id="countdown">
+            <div class="countdown__block">
+              <span class="countdown__num" id="cd-days">00</span>
+              <span class="countdown__unit">dias</span>
+            </div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__block">
+              <span class="countdown__num" id="cd-hours">00</span>
+              <span class="countdown__unit">horas</span>
+            </div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__block">
+              <span class="countdown__num" id="cd-mins">00</span>
+              <span class="countdown__unit">min</span>
+            </div>
+            <span class="countdown__sep">:</span>
+            <div class="countdown__block">
+              <span class="countdown__num" id="cd-secs">00</span>
+              <span class="countdown__unit">seg</span>
+            </div>
+          </div>
+          <div class="urgencia__vagas">
+            <div class="vagas-bar">
+              <div class="vagas-bar__fill" style="width: 74%"></div>
+            </div>
+            <span>37 de 50 vagas preenchidas</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DEPOIMENTOS — PROVA SOCIAL
+  ═══════════════════════════════════════════ -->
+  <section class="depoimentos" id="depoimentos">
+    <div class="container">
+
+      <div class="section-header" data-reveal>
+        <p class="section-eyebrow">Prova social</p>
+        <h2 class="section-title">Quem já usou, <span class="gradient-text">aprovou.</span></h2>
+      </div>
+
+      <div class="depoimentos__grid">
+
+        <div class="depoimento glass" data-reveal>
+          <div class="depoimento__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="depoimento__texto">"Eu usava o ChatGPT de qualquer jeito e não aproveitava nada. Com os prompts do Kit, parece que a IA virou outro programa. Minha redação subiu muito."</p>
+          <div class="depoimento__autor">
+            <img src="./images/depo3.jpg" alt="Ana Clara" />
+            <div>
+              <strong>Ana Clara S.</strong>
+              <span>3ª série — Cursinho particular</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depoimento glass" data-reveal data-delay="100">
+          <div class="depoimento__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="depoimento__texto">"O cronograma que o ChatGPT gerou com o prompt do Kit foi melhor do que o do meu cursinho. Consigo estudar 1h por dia com direção, sem enrolação."</p>
+          <div class="depoimento__autor">
+            <img src="./images/depoimento.jpg" alt="Gabriel M." />
+            <div>
+              <strong>Gabriel M.</strong>
+              <span>2ª série — Escola pública</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="depoimento glass" data-reveal data-delay="200">
+          <div class="depoimento__stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="depoimento__texto">"Os 50 temas de redação com repertório eram exatamente o que eu precisava. Entrei num tema difícil na simulação e fui de boa porque já tinha o conteúdo pronto."</p>
+          <div class="depoimento__autor">
+            <img src="./images/depoimento2.jpg" alt="Larissa T." />
+            <div>
+              <strong>Larissa T.</strong>
+              <span>Vestibulanda — ENEM 2025</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GARANTIA
+  ═══════════════════════════════════════════ -->
+  <section class="garantia" id="garantia">
+    <div class="container">
+      <div class="garantia__box glass" data-reveal>
+        <div class="garantia__icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="garantia__text">
+          <h2>Garantia de <span class="gradient-text">7 dias</span></h2>
+          <p>Se você usar o Kit por 7 dias e não ver nenhuma diferença na sua forma de estudar, é só me mandar uma mensagem e eu devolvo 100% do valor. Sem perguntas, sem burocracia.</p>
+          <p>O risco é zero. A decisão é sua.</p>
+        </div>
+        <div class="garantia__selos">
+          <div class="garantia__selo">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Reembolso total</span>
+          </div>
+          <div class="garantia__selo">
+            <i class="fa-solid fa-comment-slash"></i>
+            <span>Sem perguntas</span>
+          </div>
+          <div class="garantia__selo">
+            <i class="fa-solid fa-clock"></i>
+            <span>7 dias corridos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA FINAL — ACTION
+  ═══════════════════════════════════════════ -->
+  <section class="cta-final" id="cta-final">
+    <div class="container">
+      <div class="cta-final__inner" data-reveal>
+
+        <div class="cta-final__tag"><i class="fa-solid fa-crown"></i> Oferta de lançamento</div>
+        <h2 class="cta-final__title">
+          Sua chance de estudar com <span class="gradient-text">método real</span><br />
+          por menos de R$28.
+        </h2>
+        <p class="cta-final__sub">Acesso imediato. Vitalício. Garantia de 7 dias. Edição limitada.</p>
+
+        <!-- Preço -->
+        <div class="cta-final__price">
+          <span class="price-old">R$97,00</span>
+          <div class="price-main">
+            <span class="price-currency">R$</span>
+            <span class="price-value">27</span>
+            <span class="price-cents">,90</span>
+          </div>
+          <span class="price-note">pagamento único · acesso vitalício</span>
+        </div>
+
+        <!-- Botão -->
+        <a href="https://pay.kiwify.com.br/Y3Xbo0Q" class="btn btn--primary btn--xl btn--pulse" onclick="goCheckout(event)" target="_blank">
+          <i class="fa-solid fa-lock"></i>
+          GARANTIR MEU ACESSO AGORA
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Contador abaixo do botão -->
+        <div class="cta-final__countdown">
+          <i class="fa-solid fa-fire"></i>
+          Oferta encerra em:
+          <strong id="cta-cd-days">00</strong>d
+          <strong id="cta-cd-hours">00</strong>h
+          <strong id="cta-cd-mins">00</strong>m
+          <strong id="cta-cd-secs">00</strong>s
+        </div>
+
+        <!-- Selos finais -->
+        <div class="cta-final__trust">
+          <span><i class="fa-solid fa-shield-halved"></i> Compra 100% segura</span>
+          <span><i class="fa-solid fa-bolt"></i> Acesso imediato</span>
+          <span><i class="fa-solid fa-infinity"></i> Acesso vitalício</span>
+          <span><i class="fa-solid fa-rotate-left"></i> Garantia 7 dias</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <span class="logo">
+          <span class="logo__icon"><i class="fa-solid fa-bolt"></i></span>
+          <span class="logo__text">Kit <strong>ENEM IA</strong></span>
+        </span>
+        <p>Sistema de estudo com IA para o ENEM.<br />Edição Exclusiva 2025.</p>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Uso</a>
+        <a href="#">Contato</a>
+        <a href="#">Suporte</a>
+      </div>
+
+      <p class="footer__copy">
+        &copy; 2025 Kit ENEM IA · Todos os direitos reservados.
+      </p>
+
+    </div>
+
+    <!-- Paleta de cores (referência de designer) -->
+    <div class="color-palette" id="color-palette" title="Clique para ver a paleta">
+      <span class="palette-toggle" id="palette-toggle">🎨</span>
+      <div class="palette-tooltip" id="palette-tooltip">
+        <p class="palette-title">Paleta Exclusiva</p>
+        <div class="palette-swatches">
+          <div class="swatch" style="background:#0A0A0A"><span>#0A0A0A</span></div>
+          <div class="swatch" style="background:#1A1A1A"><span>#1A1A1A</span></div>
+          <div class="swatch" style="background:#6C2BD9"><span>#6C2BD9</span></div>
+          <div class="swatch" style="background:#9B4DFF"><span>#9B4DFF</span></div>
+          <div class="swatch" style="background:#D4AF37"><span>#D4AF37</span></div>
+          <div class="swatch" style="background:#F5F5F5; color:#000"><span>#F5F5F5</span></div>
+          <div class="swatch" style="background:#A0A0A0; color:#000"><span>#A0A0A0</span></div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
