@@ -104,6 +104,15 @@ This project is licensed under the MIT License — feel free to use, modify, and
 
 ---
 
+## 💡 Usage
+
+Feel free to use, modify, and adapt this project as you like 🚀
+
+Just don’t forget to give proper credit ✨
+
+
+---
+
 ## 👨‍💻 Author
 
 Developed by Marcos Henrique
