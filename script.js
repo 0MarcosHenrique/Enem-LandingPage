@@ -1,11 +1,6 @@
-/* ═══════════════════════════════════════════════════════════════
-   KIT ChatGPT ENEM — script.js
-   Autor: Kit ENEM IA · Edição Exclusiva 2025
-   ═══════════════════════════════════════════════════════════════ */
-
 'use strict';
 
-/* ─── 1. CURSOR GLOW (light follow) ──────────────────────────── */
+/*  1. CURSOR GLOW (light follow)*/
 (function initCursor() {
   const glow = document.getElementById('cursor-glow');
   if (!glow) return;
@@ -36,7 +31,7 @@
 })();
 
 
-/* ─── 2. CANVAS DE PARTÍCULAS ────────────────────────────────── */
+/* 2. CANVAS DE PARTÍCULAS  */
 (function initParticles() {
   const canvas = document.getElementById('particles-canvas');
   if (!canvas) return;
@@ -124,7 +119,7 @@
 })();
 
 
-/* ─── 3. HEADER — scroll behavior ───────────────────────────── */
+/* 3. HEADER — scroll behavior  */
 (function initHeader() {
   const header = document.getElementById('header');
   if (!header) return;
@@ -143,7 +138,7 @@
 })();
 
 
-/* ─── 4. HAMBURGER — menu mobile ─────────────────────────────── */
+/* 4. HAMBURGER — menu mobile  */
 (function initHamburger() {
   const btn = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
@@ -167,7 +162,7 @@
 })();
 
 
-/* ─── 5. SCROLL REVEAL ───────────────────────────────────────── */
+/* 5. SCROLL REVEAL */
 (function initScrollReveal() {
   const elements = document.querySelectorAll('[data-reveal]');
   if (!elements.length) return;
@@ -194,7 +189,7 @@
 })();
 
 
-/* ─── 6. COUNTDOWN ───────────────────────────────────────────── */
+/* 6. COUNTDOWN */
 (function initCountdown() {
   // Pega (ou cria) data de expiração no localStorage
   const STORAGE_KEY = 'kitenem_expiry';
@@ -270,7 +265,7 @@
 })();
 
 
-/* ─── 7. CARD SHINE — mouse tracking ────────────────────────── */
+/*  7. CARD SHINE — mouse tracking*/
 (function initCardShine() {
   const cards = document.querySelectorAll('.card--diamond');
 
@@ -286,7 +281,7 @@
 })();
 
 
-/* ─── 8. VAGAS BAR — animate on scroll ──────────────────────── */
+/*  8. VAGAS BAR — animate on scroll  */
 (function initVagasBar() {
   const bar = document.querySelector('.vagas-bar__fill');
   if (!bar) return;
@@ -307,7 +302,7 @@
 })();
 
 
-/* ─── 9. PALETA DE CORES (tooltip) ──────────────────────────── */
+/* 9. PALETA DE CORES (tooltip)  */
 (function initPalette() {
   const toggle = document.getElementById('palette-toggle');
   const palette = document.getElementById('color-palette');
@@ -339,7 +334,7 @@
 })();
 
 
-/* ─── 10. MOCKUP — tilt 3D suave ────────────────────────────── */
+/* 10. MOCKUP — tilt 3D suave  */
 (function initMockupTilt() {
   const frame = document.querySelector('.mockup-frame');
   if (!frame) return;
@@ -367,7 +362,7 @@
 })();
 
 
-/* ─── 11. CHECKOUT SIMULADO ──────────────────────────────────── */
+/*  11. CHECKOUT SIMULADO  */
 function goCheckout(event) {
   if (event) event.preventDefault();
 
@@ -421,7 +416,7 @@ function goCheckout(event) {
 window.goCheckout = goCheckout;
 
 
-/* ─── 12. SCROLL SUAVE nos links âncora ─────────────────────── */
+/*  12. SCROLL SUAVE nos links âncora  */
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
@@ -440,7 +435,7 @@ window.goCheckout = goCheckout;
 })();
 
 
-/* ─── 13. LAZY LOAD das imagens ──────────────────────────────── */
+/* 13. LAZY LOAD das imagens  */
 (function initLazyImages() {
   if ('loading' in HTMLImageElement.prototype) {
     document.querySelectorAll('img').forEach(img => {

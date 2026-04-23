@@ -1,9 +1,6 @@
-/* ═══════════════════════════════════════════════════════════════
-   KIT ChatGPT ENEM — style.css
-   Autor: Kit ENEM IA · Edição Exclusiva 2025
-   ═══════════════════════════════════════════════════════════════ */
 
-/* ─── RESET & VARIÁVEIS ─────────────────────────────────────── */
+
+/*  RESET & VARIÁVEIS  */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -68,7 +65,7 @@ body {
   cursor: none; /* cursor personalizado */
 }
 
-/* ─── CURSOR PERSONALIZADO ──────────────────────────────────── */
+/*  CURSOR PERSONALIZADO */
 .cursor-glow {
   position: fixed;
   top: 0; left: 0;
@@ -87,7 +84,7 @@ a, button, [role="button"] {
   cursor: pointer;
 }
 
-/* ─── CANVAS DE PARTÍCULAS ──────────────────────────────────── */
+/*  CANVAS DE PARTÍCULAS  */
 #particles-canvas {
   position: fixed;
   top: 0; left: 0;
@@ -97,7 +94,7 @@ a, button, [role="button"] {
   opacity: 0.5;
 }
 
-/* ─── CONTAINER ─────────────────────────────────────────────── */
+/*  CONTAINER */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -107,7 +104,7 @@ a, button, [role="button"] {
   z-index: 1;
 }
 
-/* ─── TIPOGRAFIA GLOBAL ─────────────────────────────────────── */
+/* TIPOGRAFIA GLOBAL*/
 h1, h2, h3, h4, h5 {
   font-family: var(--font-display);
   font-weight: 800;
@@ -121,7 +118,7 @@ a {
 
 img { max-width: 100%; display: block; }
 
-/* ─── GRADIENTE DE TEXTO ────────────────────────────────────── */
+/*  GRADIENTE DE TEXTO */
 .gradient-text {
   background: var(--grad-text);
   -webkit-background-clip: text;
@@ -129,7 +126,7 @@ img { max-width: 100%; display: block; }
   background-clip: text;
 }
 
-/* ─── GLASS MORPHISM ────────────────────────────────────────── */
+/*  GLASS MORPHISM */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -138,7 +135,7 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-lg);
 }
 
-/* ─── BADGES ────────────────────────────────────────────────── */
+/*  BADGES  */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -157,7 +154,7 @@ img { max-width: 100%; display: block; }
   color: var(--gold-light);
 }
 
-/* ─── BOTÕES ────────────────────────────────────────────────── */
+/* BOTÕES */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -222,7 +219,7 @@ img { max-width: 100%; display: block; }
   animation: none;
 }
 
-/* ─── HEADER ────────────────────────────────────────────────── */
+/* HEADER  */
 .header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -351,7 +348,7 @@ img { max-width: 100%; display: block; }
 .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ─── HERO ──────────────────────────────────────────────────── */
+/* HERO  */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -569,7 +566,7 @@ img { max-width: 100%; display: block; }
   50%       { transform: translateX(-50%) translateY(6px); }
 }
 
-/* ─── SECTION HEADER ────────────────────────────────────────── */
+/* SECTION HEADER */
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -599,7 +596,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* ─── PROBLEMS SECTION ──────────────────────────────────────── */
+/*  PROBLEMS SECTION */
 .problems {
   padding: var(--section-py) 0;
   position: relative;
@@ -715,7 +712,7 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
-/* ─── CARDS — DIAMOND REFLECT ───────────────────────────────── */
+/* CARDS — DIAMOND REFLECT */
 .content {
   padding: var(--section-py) 0;
   position: relative;
@@ -873,7 +870,7 @@ img { max-width: 100%; display: block; }
   border-color: rgba(212,175,55,0.3);
 }
 
-/* ─── DIFERENCIAL ───────────────────────────────────────────── */
+/*  DIFERENCIAL  */
 .diferencial {
   padding: var(--section-py) 0;
   background: linear-gradient(180deg, transparent 0%, rgba(108,43,217,0.04) 50%, transparent 100%);
@@ -931,7 +928,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
 }
 
-/* ─── URGÊNCIA ──────────────────────────────────────────────── */
+/*  URGÊNCIA  */
 .urgencia {
   padding: var(--section-py) 0;
 }
@@ -1072,7 +1069,7 @@ img { max-width: 100%; display: block; }
   50%       { opacity: 1; }
 }
 
-/* ─── DEPOIMENTOS ───────────────────────────────────────────── */
+/* DEPOIMENTOS */
 .depoimentos {
   padding: var(--section-py) 0;
 }
@@ -1136,7 +1133,7 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
-/* ─── GARANTIA ──────────────────────────────────────────────── */
+/* GARANTIA  */
 .garantia {
   padding: var(--section-py) 0;
 }
@@ -1195,7 +1192,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.85rem;
 }
 
-/* ─── CTA FINAL ─────────────────────────────────────────────── */
+/*  CTA FINAL */
 .cta-final {
   padding: var(--section-py) 0;
   position: relative;
@@ -1328,7 +1325,7 @@ img { max-width: 100%; display: block; }
   color: var(--primary-h);
 }
 
-/* ─── FOOTER ────────────────────────────────────────────────── */
+/*  FOOTER  */
 .footer {
   background: var(--bg-2);
   border-top: 1px solid rgba(255,255,255,0.06);
@@ -1456,7 +1453,7 @@ img { max-width: 100%; display: block; }
   opacity: 0.8;
 }
 
-/* ─── SCROLL REVEAL ─────────────────────────────────────────── */
+/*  SCROLL REVEAL  */
 [data-reveal] {
   opacity: 0;
   transform: translateY(32px);
@@ -1469,7 +1466,7 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
-/* ─── FUNDO GRID ────────────────────────────────────────────── */
+/* FUNDO GRID */
 body::before {
   content: '';
   position: fixed;
@@ -1482,7 +1479,7 @@ body::before {
   z-index: 0;
 }
 
-/* ─── RESPONSIVO — TABLET ───────────────────────────────────── */
+/*  RESPONSIVO — TABLET */
 @media (max-width: 1024px) {
   :root { --section-py: 80px; }
 
@@ -1511,7 +1508,7 @@ body::before {
   .urgencia__box { grid-template-columns: 1fr; gap: 32px; }
 }
 
-/* ─── RESPONSIVO — MOBILE ───────────────────────────────────── */
+/*  RESPONSIVO — MOBILE  */
 @media (max-width: 768px) {
   :root { --section-py: 64px; }
 
